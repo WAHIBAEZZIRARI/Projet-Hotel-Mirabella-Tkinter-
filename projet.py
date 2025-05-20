@@ -2,13 +2,13 @@ import tkinter as tk
 from tkinter import messagebox, Listbox
 import csv
 
-# === Fenêtre principale ===
+#  Fenêtre principale 
 root = tk.Tk()
 root.title("HOTEL MIRABELLA")
 root.geometry("500x600")
 root.configure(bg="#0c1b33")
 
-# === Zone d'en-tête ===
+#  Zone d'en-tête 
 tk.Label(root, text="HOTEL\nMIRABELLA", font=("Georgia", 22, "bold"), bg="#0c1b33", fg="gold").pack()
 
 titre_label = tk.Label(root, text="", font=("Arial", 18, "bold"), bg="#0c1b33", fg="white")
@@ -28,7 +28,7 @@ def clear_frame():
     for widget in frame.winfo_children():
         widget.destroy()
 
-# === Page de connexion ===
+#  Page de connexion 
 def afficher_connexion():
     clear_frame()
     titre_label.config(text="Connexion")
@@ -50,7 +50,7 @@ def afficher_connexion():
 
     tk.Button(frame, text="Se connecter", bg="#d4a857", fg="black", font=("Arial", 12, "bold"), command=se_connecter).pack(pady=20)
 
-# === Page de réservation ===
+#  Page de réservation 
 def afficher_reservation():
     global nom_entry, type_chambre, num_chambre, jours_entry, listbox
 
@@ -175,7 +175,7 @@ def afficher_reservation():
         type_chambre.set("Simple")
         listbox.delete(0, tk.END)
 
-    # === Boutons alignés ===
+    #  Boutons alignés 
     btn_frame = tk.Frame(frame, bg="#0c1b33")
     btn_frame.pack(pady=10)
 
